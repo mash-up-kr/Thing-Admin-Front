@@ -16,7 +16,8 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.onClick(this.state.id, this.state.password);
+    const value = this.props.onClick(this.state.id, this.state.password);
+    console.log(value);
   }
 
   render() {
