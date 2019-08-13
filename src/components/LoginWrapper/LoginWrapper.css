@@ -1,0 +1,10 @@
+.LoginWrapper {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .LoginWrapper {
+      width: 90%;    
+  }
+}
