@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
-import { Home, Select } from 'pages';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { Home, Select, PrivateRoute } from 'pages';
+
 
 class Root extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Route exact path="/" component={Home}/>
-        <Route path="/select" component={Select}/>
+        <Switch>
+         <Route path="/" component={Home}/>
+         <PrivateRoute path="/select" component={Select}/>
+        </Switch>
       </BrowserRouter>
     );
   }

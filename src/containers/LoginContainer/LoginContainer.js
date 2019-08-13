@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { LoginWrapper, Login } from '../../components';
 import { Redirect } from 'react-router-dom';
+import Auth from '../../services/Auth';
 import * as service from '../../services/login';
 
 class LoginContainer extends Component {
@@ -13,12 +14,6 @@ class LoginContainer extends Component {
     };
   }
 
-  setIsAuth = () => {
-    this.setState({
-      isAuth: true,
-    });
-  };
-
   handleSignInClick = async (id, password) => {
    try{
       this.setState({
@@ -28,7 +23,10 @@ class LoginContainer extends Component {
       const response = await service.signIn(id, password);
       if (response.status === 200) {
         alert('성공');
-        this.setState({ isAuth: true });
+        Auth.authenticate();
+        this.setState({
+          isAuth: Auth.getAuth()
+        })
       } else {
         this.setState({
           fetching: false 
@@ -41,7 +39,7 @@ class LoginContainer extends Component {
   }
 
   render() {
-    const { isAuth, fetching } = this.state;
+    const { fetching, isAuth } = this.state;
     if(isAuth) {
       return(<Redirect to='/select'/>)
     } else {
