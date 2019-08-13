@@ -1,0 +1,17 @@
+.Header {
+  background-color: #00b5ad;
+  color: white;
+  font-size: 2rem;
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  height: 5rem;
+}
+
+.Icon {
+  float: left;
+  margin-top: -0.5%;
+  width: 4rem;
+  height: 4rem;
+}
