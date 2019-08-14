@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import { Header } from '../components';
-import { SelectContainer } from '../containers'
 
-class Select extends Component {
+class Youtuber extends Component {
   render() {
     return (
       <div>
         <Header/>
-        <SelectContainer/>
+        <h1>Youtuber</h1>
       </div>
     );
   }
 }
 
-export default Select;
+export default Youtuber;

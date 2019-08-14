@@ -1,0 +1,10 @@
+.SelectWrapper {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .SelectWrapper {
+      width: 90%;    
+  }
+}

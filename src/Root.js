@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
-import { Home, Select, PrivateRoute } from 'pages';
+import { Home, Select, Category, Youtuber, Tag, PrivateRoute } from 'pages';
 
 
 class Root extends Component {
@@ -8,8 +8,11 @@ class Root extends Component {
     return (
       <BrowserRouter>
         <Switch>
-         <Route path="/" component={Home}/>
-         <PrivateRoute path="/select" component={Select}/>
+         <Route exact path="/" component={Home}/>
+         <PrivateRoute exact path="/select" component={Select}/>
+         <PrivateRoute exact path="/category" component={Category}/>
+         <PrivateRoute exact path="/youtuber" component={Youtuber}/>
+         <PrivateRoute exact path="/tag" component={Tag}/>
         </Switch>
       </BrowserRouter>
     );

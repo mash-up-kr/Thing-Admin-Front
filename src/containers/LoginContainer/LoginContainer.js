@@ -24,6 +24,8 @@ class LoginContainer extends Component {
       if (response.status === 200) {
         alert('성공');
         Auth.authenticate();
+
+    console.log(Auth.getAuth())
         this.setState({
           isAuth: Auth.getAuth()
         })
