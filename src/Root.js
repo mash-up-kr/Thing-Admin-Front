@@ -8,8 +8,8 @@ class Root extends Component {
     return (
       <BrowserRouter>
         <Switch>
-         <Route path="/" component={Home}/>
-         <PrivateRoute path="/select" component={Select}/>
+         <Route exact path="/" component={Home}/>
+         <PrivateRoute exact path="/select" component={Select}/>
         </Switch>
       </BrowserRouter>
     );
